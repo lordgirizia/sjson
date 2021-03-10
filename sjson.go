@@ -2,7 +2,7 @@
 package sjson
 
 import (
-	jsongo "encoding/json"
+	jsoniter "github.com/json-iterator/go"
 	"reflect"
 	"strconv"
 	"unsafe"
@@ -10,6 +10,7 @@ import (
 	"github.com/tidwall/gjson"
 )
 
+var jsongo = jsoniter.ConfigCompatibleWithStandardLibrary
 type errorType struct {
 	msg string
 }
